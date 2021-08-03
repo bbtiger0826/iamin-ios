@@ -10,6 +10,9 @@
 		3C5CBD8826B7F23200B90ED3 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5CBD8726B7F23200B90ED3 /* Member.swift */; };
 		3C5CBD8A26B7F23E00B90ED3 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5CBD8926B7F23E00B90ED3 /* MemberCell.swift */; };
 		3C5CBD8C26B7F24800B90ED3 /* MemberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5CBD8B26B7F24800B90ED3 /* MemberVC.swift */; };
+		3C5CBD8F26B8DB3300B90ED3 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5CBD8E26B8DB3300B90ED3 /* Report.swift */; };
+		3C5CBD9126B8DD1600B90ED3 /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5CBD9026B8DD1600B90ED3 /* ReportVC.swift */; };
+		3C5CBD9326B8EBED00B90ED3 /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5CBD9226B8EBED00B90ED3 /* ReportCell.swift */; };
 		73CC164626B792EE0063D166 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC164526B792EE0063D166 /* AppDelegate.swift */; };
 		73CC164826B792EE0063D166 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC164726B792EE0063D166 /* SceneDelegate.swift */; };
 		73CC164A26B792EE0063D166 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC164926B792EE0063D166 /* ViewController.swift */; };
@@ -51,6 +54,9 @@
 		3C5CBD8726B7F23200B90ED3 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		3C5CBD8926B7F23E00B90ED3 /* MemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
 		3C5CBD8B26B7F24800B90ED3 /* MemberVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberVC.swift; sourceTree = "<group>"; };
+		3C5CBD8E26B8DB3300B90ED3 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		3C5CBD9026B8DD1600B90ED3 /* ReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
+		3C5CBD9226B8EBED00B90ED3 /* ReportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCell.swift; sourceTree = "<group>"; };
 		73CC164226B792EE0063D166 /* iamin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iamin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73CC164526B792EE0063D166 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73CC164726B792EE0063D166 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +118,16 @@
 			path = Member;
 			sourceTree = "<group>";
 		};
+		3C5CBD8D26B8DB1C00B90ED3 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				3C5CBD8E26B8DB3300B90ED3 /* Report.swift */,
+				3C5CBD9026B8DD1600B90ED3 /* ReportVC.swift */,
+				3C5CBD9226B8EBED00B90ED3 /* ReportCell.swift */,
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
 		73CC163926B792EE0063D166 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +151,7 @@
 		73CC164426B792EE0063D166 /* iamin */ = {
 			isa = PBXGroup;
 			children = (
+				3C5CBD8D26B8DB1C00B90ED3 /* Report */,
 				3C5CBD8626B7F1D500B90ED3 /* Member */,
 				73CC168526B793EB0063D166 /* Common */,
 				73CC167D26B793EB0063D166 /* Group */,
@@ -337,9 +354,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C5CBD8F26B8DB3300B90ED3 /* Report.swift in Sources */,
 				73CC164A26B792EE0063D166 /* ViewController.swift in Sources */,
 				73CC169326B793EB0063D166 /* MainVC.swift in Sources */,
 				73CC169026B793EB0063D166 /* MerchCell.swift in Sources */,
+				3C5CBD9126B8DD1600B90ED3 /* ReportVC.swift in Sources */,
 				73CC169226B793EB0063D166 /* Main.swift in Sources */,
 				73CC164626B792EE0063D166 /* AppDelegate.swift in Sources */,
 				3C5CBD8826B7F23200B90ED3 /* Member.swift in Sources */,
@@ -351,6 +370,7 @@
 				3C5CBD8A26B7F23E00B90ED3 /* MemberCell.swift in Sources */,
 				73CC168F26B793EB0063D166 /* MerchListTVC.swift in Sources */,
 				73CC168B26B793EB0063D166 /* GroupListTVC.swift in Sources */,
+				3C5CBD9326B8EBED00B90ED3 /* ReportCell.swift in Sources */,
 				73CC169126B793EB0063D166 /* Common.swift in Sources */,
 				73CC168E26B793EB0063D166 /* Merch.swift in Sources */,
 			);

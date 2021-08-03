@@ -8,8 +8,8 @@
 import UIKit
 
 class MemberCell: UITableViewCell {
-    @IBOutlet weak var memberimage: UIImageView!
     
+    @IBOutlet weak var memberimage: UIImageView!
     @IBOutlet weak var lbnickname: UILabel!
     @IBOutlet weak var lbemail: UILabel!
     @IBOutlet weak var lbphoneNumber: UILabel!

@@ -1,6 +1,6 @@
 class Member: Codable{
     
-    var member_Id: Int?
+    var id: Int?
     var nickname: String?
     var email: String?
     var password: String?
@@ -10,7 +10,7 @@ class Member: Codable{
     var followed_count: Int?
     
     internal init(member_Id: Int? = nil, nickname: String? = nil, email: String? = nil, password: String? = nil, phoneNumber: String? = nil, rating: Int? = nil, follow_count: Int? = nil, followed_count: Int? = nil) {
-        self.member_Id = member_Id
+        self.id = member_Id
         self.nickname = nickname
         self.email = email
         self.password = password

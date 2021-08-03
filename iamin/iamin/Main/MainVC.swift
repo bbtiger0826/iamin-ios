@@ -53,6 +53,11 @@ class MainVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
                 groupNav.modalPresentationStyle = .fullScreen
                 present(groupNav, animated: true, completion: nil)
             }
+        case 1:
+            if let groupNav = storyboard?.instantiateViewController(withIdentifier: "memberNav") {
+                groupNav.modalPresentationStyle = .fullScreen
+                present(groupNav, animated: true, completion: nil)
+            }
        
         default:
             break
