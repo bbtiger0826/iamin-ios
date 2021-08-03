@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		480EDC0226B7E24600924C00 /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480EDC0126B7E24600924C00 /* Admin.swift */; };
+		480EDC0626B8DEB700924C00 /* AdminLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480EDC0526B8DEB700924C00 /* AdminLogin.swift */; };
 		73CC164626B792EE0063D166 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC164526B792EE0063D166 /* AppDelegate.swift */; };
 		73CC164826B792EE0063D166 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC164726B792EE0063D166 /* SceneDelegate.swift */; };
 		73CC164A26B792EE0063D166 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC164926B792EE0063D166 /* ViewController.swift */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		480EDC0126B7E24600924C00 /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
+		480EDC0526B8DEB700924C00 /* AdminLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLogin.swift; sourceTree = "<group>"; };
 		73CC164226B792EE0063D166 /* iamin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iamin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73CC164526B792EE0063D166 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73CC164726B792EE0063D166 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		480EDC0026B7E09D00924C00 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				480EDC0126B7E24600924C00 /* Admin.swift */,
+				480EDC0526B8DEB700924C00 /* AdminLogin.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
 		73CC163926B792EE0063D166 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +132,7 @@
 		73CC164426B792EE0063D166 /* iamin */ = {
 			isa = PBXGroup;
 			children = (
+				480EDC0026B7E09D00924C00 /* Admin */,
 				73CC168526B793EB0063D166 /* Common */,
 				73CC167D26B793EB0063D166 /* Group */,
 				73CC168726B793EB0063D166 /* Main */,
@@ -323,6 +337,8 @@
 				73CC164A26B792EE0063D166 /* ViewController.swift in Sources */,
 				73CC169326B793EB0063D166 /* MainVC.swift in Sources */,
 				73CC169026B793EB0063D166 /* MerchCell.swift in Sources */,
+				480EDC0226B7E24600924C00 /* Admin.swift in Sources */,
+				480EDC0626B8DEB700924C00 /* AdminLogin.swift in Sources */,
 				73CC169226B793EB0063D166 /* Main.swift in Sources */,
 				73CC164626B792EE0063D166 /* AppDelegate.swift in Sources */,
 				73CC169426B793EB0063D166 /* MainCell.swift in Sources */,
