@@ -11,7 +11,7 @@
         <!--團購檢查-->
         <scene sceneID="Pqx-XG-uXX">
             <objects>
-                <tableViewController storyboardIdentifier="groupListTVC" id="oaM-Ny-AKL" customClass="GroupListTVC" customModule="_020072601" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="groupListTVC" id="oaM-Ny-AKL" customClass="GroupListTVC" customModule="iamin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FwT-Nv-nKj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="GroupCell" id="SCW-rf-kHx" customClass="GroupCell" customModule="_020072601" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="GroupCell" id="SCW-rf-kHx" customClass="GroupCell" customModule="iamin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68.5" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SCW-rf-kHx" id="qQQ-IX-ulE">
@@ -106,13 +106,13 @@
         <!--Merch ListTVC-->
         <scene sceneID="SmZ-sQ-LX2">
             <objects>
-                <tableViewController id="mGm-xt-dxI" customClass="MerchListTVC" customModule="_020072601" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="mGm-xt-dxI" customClass="MerchListTVC" customModule="iamin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="330" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="u9J-jU-iQI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MerchCell" id="1X8-VZ-q4a" customClass="MerchCell" customModule="_020072601" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MerchCell" id="1X8-VZ-q4a" customClass="MerchCell" customModule="iamin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="330"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1X8-VZ-q4a" id="WoP-Z5-MFM">
@@ -216,7 +216,7 @@
         <!--Books-->
         <scene sceneID="ODC-bg-awI">
             <objects>
-                <viewController id="iCt-a9-g7B" customClass="MainVC" customModule="_020072601" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iCt-a9-g7B" customClass="MainVC" customModule="iamin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UMi-9T-gpx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,7 +231,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mainCell" id="eND-7C-X3B" userLabel="mainCell" customClass="MainCell" customModule="_020072601" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mainCell" id="eND-7C-X3B" userLabel="mainCell" customClass="MainCell" customModule="iamin" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">

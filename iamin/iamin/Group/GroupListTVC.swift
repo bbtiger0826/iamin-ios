@@ -168,40 +168,63 @@ class GroupListTVC: UITableViewController, UISearchBarDelegate {
         
         // 左滑時顯示Delete按鈕
         let delete = UIContextualAction(style: .normal, title: "封鎖") { (action, view, bool) in
-            //
-            var requestParam = [String: Any]()
-            requestParam["action"] = "deleteById"
-            requestParam["id"] = self.searchedGroups[indexPath.row].groupId
-            requestParam["merchsId"] = "null"
-            executeTask(self.url_server!, requestParam) { data, response, error in
-                if error == nil {
-                    if data != nil {
-                        // 查看回傳的資料
-                        print("input: \(String(data: data!, encoding: .utf8)!)")
-                        if let result = String(data: data!, encoding: .utf8) {
-                            if let count = Int(result) {
-                                // 確定server端刪除資料後，才將client端資料刪除
-                                if count != 0 {
-                                    // 抓取要刪除的物件，給allGroups判斷
-                                    let group = self.searchedGroups[indexPath.row]
-                                    // searchedGroups - remove
-                                    self.searchedGroups.remove(at: indexPath.row)
-                                    // allGroups - remove
-                                    if let index = self.allGroups.firstIndex(of: group) {
-                                        self.allGroups.remove(at: index)
-                                    }
-                                    // UI - remove
-                                    DispatchQueue.main.async {
-                                        tableView.deleteRows(at: [indexPath], with: .fade)
+            // 開啟文字方塊的對話訊息
+            let alertController = UIAlertController(title: "封鎖", message: "請輸入封鎖的原因", preferredStyle: .alert)
+            
+            /* 呼叫addTextField()，系統會自動建立文字方塊 */
+            alertController.addTextField {
+                /* textField代表系統建立的文字方塊 */
+                (textField) in
+                /* 設定文字方塊的提示文字 */
+                textField.placeholder = "封鎖原因"
+            }
+            // 進行封鎖
+            let ok = UIAlertAction(title: "Ok", style: .default) {_ in
+                // 封鎖原因字串
+                let reason = alertController.textFields?[0].text ?? ""
+                // 封鎖這筆
+                var requestParam = [String: Any]()
+                requestParam["action"] = "blockadeById"
+                requestParam["id"] = self.searchedGroups[indexPath.row].groupId
+                requestParam["memberId"] = self.searchedGroups[indexPath.row].memberId
+                requestParam["name"] = self.searchedGroups[indexPath.row].name
+                requestParam["reason"] = reason
+                executeTask(self.url_server!, requestParam) { data, response, error in
+                    if error == nil {
+                        if data != nil {
+                            // 查看回傳的資料
+                            print("input: \(String(data: data!, encoding: .utf8)!)")
+                            if let result = String(data: data!, encoding: .utf8) {
+                                if let count = Int(result) {
+                                    // 確定server端刪除資料後，才將client端資料刪除
+                                    if count != 0 {
+                                        // 抓取要刪除的物件，給allGroups判斷
+                                        let group = self.searchedGroups[indexPath.row]
+                                        // searchedGroups - remove
+                                        self.searchedGroups.remove(at: indexPath.row)
+                                        // allGroups - remove
+                                        if let index = self.allGroups.firstIndex(of: group) {
+                                            self.allGroups.remove(at: index)
+                                        }
+                                        // UI - remove
+                                        DispatchQueue.main.async {
+                                            tableView.deleteRows(at: [indexPath], with: .fade)
+                                        }
                                     }
                                 }
                             }
                         }
+                    }else {
+                        print("Response Error: \(error!)")
                     }
-                }else {
-                    print("Response Error: \(error!)")
                 }
             }
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel) {_ in
+            }
+            alertController.addAction(ok)
+            alertController.addAction(cancel)
+            // 呈現Alert Controller
+            self.present(alertController, animated: true, completion: nil)
         }
         delete.backgroundColor = .red
 
