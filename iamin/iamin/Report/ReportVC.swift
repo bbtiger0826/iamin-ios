@@ -25,7 +25,8 @@ class ReportVC: UITableViewController {
         let edit = UIContextualAction(style: .normal, title: "封鎖") { (action, view, bool) in
             print("EMT")
         }
-        edit.backgroundColor = UIColor.lightGray // 改變背景色
+
+        edit.backgroundColor = UIColor(red: 141/255, green: 64/255, blue: 255/255, alpha: 1) // 改變背景色
         
         // 左滑時顯示Delete按鈕
         let delete = UIContextualAction(style: .normal, title: "刪除") { (action, view, bool) in
