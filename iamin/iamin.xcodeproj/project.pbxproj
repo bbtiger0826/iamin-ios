@@ -13,6 +13,8 @@
 		3C5CBD8F26B8DB3300B90ED3 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5CBD8E26B8DB3300B90ED3 /* Report.swift */; };
 		3C5CBD9126B8DD1600B90ED3 /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5CBD9026B8DD1600B90ED3 /* ReportVC.swift */; };
 		3C5CBD9326B8EBED00B90ED3 /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5CBD9226B8EBED00B90ED3 /* ReportCell.swift */; };
+		4854AB0526B9495300E29D5B /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4854AB0326B9495300E29D5B /* Admin.swift */; };
+		4854AB0626B9495300E29D5B /* AdminLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4854AB0426B9495300E29D5B /* AdminLogin.swift */; };
 		73CC164626B792EE0063D166 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC164526B792EE0063D166 /* AppDelegate.swift */; };
 		73CC164826B792EE0063D166 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC164726B792EE0063D166 /* SceneDelegate.swift */; };
 		73CC164A26B792EE0063D166 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC164926B792EE0063D166 /* ViewController.swift */; };
@@ -57,6 +59,8 @@
 		3C5CBD8E26B8DB3300B90ED3 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		3C5CBD9026B8DD1600B90ED3 /* ReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
 		3C5CBD9226B8EBED00B90ED3 /* ReportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCell.swift; sourceTree = "<group>"; };
+		4854AB0326B9495300E29D5B /* Admin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
+		4854AB0426B9495300E29D5B /* AdminLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminLogin.swift; sourceTree = "<group>"; };
 		73CC164226B792EE0063D166 /* iamin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iamin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73CC164526B792EE0063D166 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73CC164726B792EE0063D166 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +132,15 @@
 			path = Report;
 			sourceTree = "<group>";
 		};
+		4854AB0226B9495300E29D5B /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				4854AB0326B9495300E29D5B /* Admin.swift */,
+				4854AB0426B9495300E29D5B /* AdminLogin.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
 		73CC163926B792EE0063D166 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +164,7 @@
 		73CC164426B792EE0063D166 /* iamin */ = {
 			isa = PBXGroup;
 			children = (
+				4854AB0226B9495300E29D5B /* Admin */,
 				3C5CBD8D26B8DB1C00B90ED3 /* Report */,
 				3C5CBD8626B7F1D500B90ED3 /* Member */,
 				73CC168526B793EB0063D166 /* Common */,
@@ -357,12 +371,14 @@
 				3C5CBD8F26B8DB3300B90ED3 /* Report.swift in Sources */,
 				73CC164A26B792EE0063D166 /* ViewController.swift in Sources */,
 				73CC169326B793EB0063D166 /* MainVC.swift in Sources */,
+				4854AB0526B9495300E29D5B /* Admin.swift in Sources */,
 				73CC169026B793EB0063D166 /* MerchCell.swift in Sources */,
 				3C5CBD9126B8DD1600B90ED3 /* ReportVC.swift in Sources */,
 				73CC169226B793EB0063D166 /* Main.swift in Sources */,
 				73CC164626B792EE0063D166 /* AppDelegate.swift in Sources */,
 				3C5CBD8826B7F23200B90ED3 /* Member.swift in Sources */,
 				73CC169426B793EB0063D166 /* MainCell.swift in Sources */,
+				4854AB0626B9495300E29D5B /* AdminLogin.swift in Sources */,
 				73CC164826B792EE0063D166 /* SceneDelegate.swift in Sources */,
 				73CC168D26B793EB0063D166 /* GroupCell.swift in Sources */,
 				73CC168C26B793EB0063D166 /* Group.swift in Sources */,
