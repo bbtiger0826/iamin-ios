@@ -10,6 +10,7 @@ import UIKit
 class ReportCell: UITableViewCell {
 
     
+    @IBOutlet weak var lb_number: UILabel!
     @IBOutlet weak var lb_title: UILabel!
     @IBOutlet weak var lb_report_title: UILabel!
     @IBOutlet weak var lb_message: UILabel!

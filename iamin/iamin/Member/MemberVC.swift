@@ -17,6 +17,12 @@ class MemberVC: UITableViewController {
         showMembers(requestParam)
     }
     
+    @IBAction func click_gohome(_ sender: Any) {
+        print("eeeeeeeeeeeee")
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
     func showMembers(_ requestParam: [String: String]) {
         executeTask(url_server!, requestParam) { (data, response, error) in
             if error == nil {
