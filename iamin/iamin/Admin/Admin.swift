@@ -1,8 +1,13 @@
-//
-//  Admin.swift
-//  iamin
-//
-//  Created by 王靖渝 on 2021/8/2.
-//
-
-import Foundation
+class Admin: Codable{
+    
+    var id: Int
+    var account: String
+    var password: String
+    
+    public init(_ id: Int,_ account: String,_ password: String) {
+        self.id = id
+        self.account = account
+        self.password = password
+    }
+    
+}

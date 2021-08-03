@@ -108,4 +108,15 @@ class MainVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         
         return mains
     }
+    //登出
+    @IBAction func clickLogout(_ sender: Any) {
+        let userDefault = UserDefaults()
+        userDefault.removeObject(forKey: "Account")
+        userDefault.removeObject(forKey: "Password")
+        if let groupNav = storyboard?.instantiateViewController(withIdentifier: "Login") {
+            groupNav.modalPresentationStyle = .fullScreen
+            present(groupNav, animated: true, completion: nil)
+        }
+        
+    }
 }
