@@ -23,7 +23,35 @@ class ReportVC: UITableViewController {
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         // 左滑時顯示Edit按鈕
         let edit = UIContextualAction(style: .normal, title: "封鎖") { (action, view, bool) in
-            print("EMT")
+            let url_server_member = URL(string: common_url + "memberController")
+            var requestParam = [String: Any]()
+            
+            requestParam["action"] = "delete"
+            requestParam["member"] = try! String(data: JSONEncoder().encode(self.member), encoding: .utf8)
+            requestParam["reportid"] = self.allreports[indexPath.row].report_id
+            executeTask(url_server_member!, requestParam) { data, response, error in
+                if error == nil {
+                    if data != nil {
+                        // 查看回傳的資料
+                        print("input: \(String(data: data!, encoding: .utf8)!)")
+                        if let result = String(data: data!, encoding: .utf8) {
+                            if let count = Int(result) {
+                                // 確定server端刪除資料後，才將client端資料刪除
+                                if count != 0 {
+                                    // allGroups - remove
+                                    self.allreports.remove(at: indexPath.row)
+                                    // UI - remove
+                                    DispatchQueue.main.async {
+                                        tableView.deleteRows(at: [indexPath], with: .fade)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }else {
+                    print("Response Error: \(error!)")
+                }
+            }
         }
 
         edit.backgroundColor = UIColor(red: 141/255, green: 64/255, blue: 255/255, alpha: 1) // 改變背景色
