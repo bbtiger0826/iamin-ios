@@ -9,12 +9,9 @@ class AdminLogin: UIViewController {
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var tvResult: UITextView!
     
-
 //    let url_server = URL(string: "http://192.168.0.79:8080/iamin_JavaServlet/memberController")
     let url_server = URL(string: common_url + "memberController")
     
-
-//    let url_server = URL(string: "http://127.0.0.1:8080/iamin_JavaServlet/memberController")
 
     
     var id: Int?

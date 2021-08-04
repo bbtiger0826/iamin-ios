@@ -398,11 +398,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="回首頁"/>
                                 <connections>
-<<<<<<< HEAD
-                                    <action selector="clickHome:" destination="BFj-YJ-75u" eventType="touchUpInside" id="0s5-pp-F7z"/>
-=======
                                     <action selector="click_gohome:" destination="BFj-YJ-75u" eventType="touchUpInside" id="J6M-Ed-vB0"/>
->>>>>>> master
                                 </connections>
                             </button>
                             <connections>
