@@ -11,16 +11,18 @@ class MemberVC: UITableViewController {
 
     var members = [Member]()
     let url_server = URL(string: common_url + "Report")
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        }
+    
+    override func viewWillAppear(_ animated: Bool) {
         let requestParam = ["action" : "reportedmember"]
         showMembers(requestParam)
     }
-    
     @IBAction func click_gohome(_ sender: Any) {
-        print("eeeeeeeeeeeee")
         dismiss(animated: true, completion: nil)
-        
     }
     
     func showMembers(_ requestParam: [String: String]) {
