@@ -117,7 +117,7 @@ class MerchListTVC: UITableViewController {
 
         // 設定Cell
         cell.lableName.text = merch.name
-        cell.lablePrice.text = String(merch.price)
+        cell.lablePrice.text = "\(String(merch.price)) 元"
         cell.lableMerchDesc.text = merch.merchDesc
         
         var requestParam = [String: Any]()

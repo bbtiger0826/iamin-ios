@@ -228,7 +228,8 @@ class GroupListTVC: UITableViewController, UISearchBarDelegate {
         }
         delete.backgroundColor = .red
 
-        let swipeActions = UISwipeActionsConfiguration(actions: [delete, edit])
+        // let swipeActions = UISwipeActionsConfiguration(actions: [delete, edit])
+        let swipeActions = UISwipeActionsConfiguration(actions: [delete])
         // true代表滑到底視同觸發第一個動作；false代表滑到底也不會觸發任何動作
         swipeActions.performsFirstActionWithFullSwipe = false
         return swipeActions
