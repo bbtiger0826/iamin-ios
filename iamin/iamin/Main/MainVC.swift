@@ -58,7 +58,16 @@ class MainVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
                 groupNav.modalPresentationStyle = .fullScreen
                 present(groupNav, animated: true, completion: nil)
             }
-       
+        case 2:
+            if let groupNav = storyboard?.instantiateViewController(withIdentifier: "AllmemberNav") {
+                groupNav.modalPresentationStyle = .fullScreen
+                present(groupNav, animated: true, completion: nil)
+            }
+        case 3:
+            if let groupNav = storyboard?.instantiateViewController(withIdentifier: "resetPhone") {
+                groupNav.modalPresentationStyle = .fullScreen
+                present(groupNav, animated: true, completion: nil)
+            }
         default:
             break
         }
@@ -110,6 +119,8 @@ class MainVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         var mains = [Main]()
         mains.append(Main(name: "團購檢查", image: UIImage(named: "checkgroup.png")!))
         mains.append(Main(name: "會員檢查", image: UIImage(named: "checkmember.png")!))
+        mains.append(Main(name: "復權會員", image: UIImage(named: "suspendmember.png")!))
+        mains.append(Main(name: "重置電話", image: UIImage(named: "resetphone.png")!))
         
         return mains
     }

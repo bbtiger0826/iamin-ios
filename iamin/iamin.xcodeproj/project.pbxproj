@@ -15,6 +15,12 @@
 		3C5CBD9326B8EBED00B90ED3 /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5CBD9226B8EBED00B90ED3 /* ReportCell.swift */; };
 		4854AB0526B9495300E29D5B /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4854AB0326B9495300E29D5B /* Admin.swift */; };
 		4854AB0626B9495300E29D5B /* AdminLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4854AB0426B9495300E29D5B /* AdminLogin.swift */; };
+		48EB873926BA35960093A3F8 /* AllMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EB873826BA35960093A3F8 /* AllMemberCell.swift */; };
+		48EB874526BA5B3A0093A3F8 /* AllMemberTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EB874426BA5B3A0093A3F8 /* AllMemberTVC.swift */; };
+		48EB874826BA63F10093A3F8 /* SuspendMemberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EB874726BA63F10093A3F8 /* SuspendMemberVC.swift */; };
+		48EB874F26BB73D50093A3F8 /* ResetPhoneTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EB874E26BB73D50093A3F8 /* ResetPhoneTVC.swift */; };
+		48EB875126BB78BF0093A3F8 /* ResetPhoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EB875026BB78BF0093A3F8 /* ResetPhoneCell.swift */; };
+		48EB875326BB85560093A3F8 /* ResetPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EB875226BB85560093A3F8 /* ResetPhone.swift */; };
 		73CC164626B792EE0063D166 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC164526B792EE0063D166 /* AppDelegate.swift */; };
 		73CC164826B792EE0063D166 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC164726B792EE0063D166 /* SceneDelegate.swift */; };
 		73CC164A26B792EE0063D166 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC164926B792EE0063D166 /* ViewController.swift */; };
@@ -61,6 +67,12 @@
 		3C5CBD9226B8EBED00B90ED3 /* ReportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCell.swift; sourceTree = "<group>"; };
 		4854AB0326B9495300E29D5B /* Admin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
 		4854AB0426B9495300E29D5B /* AdminLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminLogin.swift; sourceTree = "<group>"; };
+		48EB873826BA35960093A3F8 /* AllMemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMemberCell.swift; sourceTree = "<group>"; };
+		48EB874426BA5B3A0093A3F8 /* AllMemberTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMemberTVC.swift; sourceTree = "<group>"; };
+		48EB874726BA63F10093A3F8 /* SuspendMemberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuspendMemberVC.swift; sourceTree = "<group>"; };
+		48EB874E26BB73D50093A3F8 /* ResetPhoneTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPhoneTVC.swift; sourceTree = "<group>"; };
+		48EB875026BB78BF0093A3F8 /* ResetPhoneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPhoneCell.swift; sourceTree = "<group>"; };
+		48EB875226BB85560093A3F8 /* ResetPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPhone.swift; sourceTree = "<group>"; };
 		73CC164226B792EE0063D166 /* iamin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iamin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73CC164526B792EE0063D166 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73CC164726B792EE0063D166 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +153,33 @@
 			path = Admin;
 			sourceTree = "<group>";
 		};
+		48EB873726BA34D70093A3F8 /* AllMember */ = {
+			isa = PBXGroup;
+			children = (
+				48EB873826BA35960093A3F8 /* AllMemberCell.swift */,
+				48EB874426BA5B3A0093A3F8 /* AllMemberTVC.swift */,
+			);
+			path = AllMember;
+			sourceTree = "<group>";
+		};
+		48EB874626BA63D80093A3F8 /* SuspendMember */ = {
+			isa = PBXGroup;
+			children = (
+				48EB874726BA63F10093A3F8 /* SuspendMemberVC.swift */,
+			);
+			path = SuspendMember;
+			sourceTree = "<group>";
+		};
+		48EB874B26BB6F1F0093A3F8 /* ResetPhone */ = {
+			isa = PBXGroup;
+			children = (
+				48EB874E26BB73D50093A3F8 /* ResetPhoneTVC.swift */,
+				48EB875026BB78BF0093A3F8 /* ResetPhoneCell.swift */,
+				48EB875226BB85560093A3F8 /* ResetPhone.swift */,
+			);
+			path = ResetPhone;
+			sourceTree = "<group>";
+		};
 		73CC163926B792EE0063D166 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +203,9 @@
 		73CC164426B792EE0063D166 /* iamin */ = {
 			isa = PBXGroup;
 			children = (
+				48EB874B26BB6F1F0093A3F8 /* ResetPhone */,
+				48EB874626BA63D80093A3F8 /* SuspendMember */,
+				48EB873726BA34D70093A3F8 /* AllMember */,
 				4854AB0226B9495300E29D5B /* Admin */,
 				3C5CBD8D26B8DB1C00B90ED3 /* Report */,
 				3C5CBD8626B7F1D500B90ED3 /* Member */,
@@ -368,20 +410,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48EB874826BA63F10093A3F8 /* SuspendMemberVC.swift in Sources */,
 				3C5CBD8F26B8DB3300B90ED3 /* Report.swift in Sources */,
 				73CC164A26B792EE0063D166 /* ViewController.swift in Sources */,
 				73CC169326B793EB0063D166 /* MainVC.swift in Sources */,
+				48EB873926BA35960093A3F8 /* AllMemberCell.swift in Sources */,
 				4854AB0526B9495300E29D5B /* Admin.swift in Sources */,
 				73CC169026B793EB0063D166 /* MerchCell.swift in Sources */,
 				3C5CBD9126B8DD1600B90ED3 /* ReportVC.swift in Sources */,
+				48EB874F26BB73D50093A3F8 /* ResetPhoneTVC.swift in Sources */,
 				73CC169226B793EB0063D166 /* Main.swift in Sources */,
 				73CC164626B792EE0063D166 /* AppDelegate.swift in Sources */,
 				3C5CBD8826B7F23200B90ED3 /* Member.swift in Sources */,
+				48EB875326BB85560093A3F8 /* ResetPhone.swift in Sources */,
+				48EB874526BA5B3A0093A3F8 /* AllMemberTVC.swift in Sources */,
 				73CC169426B793EB0063D166 /* MainCell.swift in Sources */,
 				4854AB0626B9495300E29D5B /* AdminLogin.swift in Sources */,
 				73CC164826B792EE0063D166 /* SceneDelegate.swift in Sources */,
 				73CC168D26B793EB0063D166 /* GroupCell.swift in Sources */,
 				73CC168C26B793EB0063D166 /* Group.swift in Sources */,
+				48EB875126BB78BF0093A3F8 /* ResetPhoneCell.swift in Sources */,
 				3C5CBD8C26B7F24800B90ED3 /* MemberVC.swift in Sources */,
 				3C5CBD8A26B7F23E00B90ED3 /* MemberCell.swift in Sources */,
 				73CC168F26B793EB0063D166 /* MerchListTVC.swift in Sources */,
@@ -565,7 +613,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9JGF5BR433;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iamin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -584,7 +632,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9JGF5BR433;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iamin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

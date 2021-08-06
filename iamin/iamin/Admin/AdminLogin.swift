@@ -9,7 +9,9 @@ class AdminLogin: UIViewController {
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var tvResult: UITextView!
     
-    let url_server = URL(string: "http://127.0.0.1:8080/iamin_JavaServlet/memberController")
+    let url_server = URL(string: common_url + "memberController")
+    
+
     
     var id: Int?
     var account: String?
@@ -18,8 +20,13 @@ class AdminLogin: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        autoLogin()
         
+        print(userDefault.value(forKey: "Account") ?? "nothing")
+        print(userDefault.value(forKey: "Password") ?? "nothing")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        autoLogin()
     }
     
     @IBAction func clickLogin(_ sender: Any) {
@@ -27,7 +34,7 @@ class AdminLogin: UIViewController {
         account = tfAccount.text == nil ? "" : tfAccount.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         password = tfPassword.text == nil ? "" : tfPassword.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         if account!.isEmpty || password!.isEmpty {
-            tvResult.text = "Account or password is invalid"
+            tvResult.text = "請輸入帳號及密碼"
             return
         }
         
@@ -87,10 +94,10 @@ class AdminLogin: UIViewController {
             let result = try JSONDecoder().decode(Admin.self, from: jsonData)
             tvResult.text = "id: \(result.id)\nAccount: \(result.account)"
             if(result.id > 0){
-                
-                userDefault.setValue(account, forKey: "Account")
-                userDefault.setValue(password, forKey: "Password")
-            
+                if(account != nil){
+                    userDefault.setValue(account, forKey: "Account")
+                    userDefault.setValue(password, forKey: "Password")
+                }
                 if let groupNav = storyboard?.instantiateViewController(withIdentifier: "functionPage") {
                     groupNav.modalPresentationStyle = .fullScreen
                     present(groupNav, animated: true, completion: nil)
