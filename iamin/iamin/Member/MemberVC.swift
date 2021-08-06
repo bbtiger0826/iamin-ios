@@ -15,12 +15,16 @@ class MemberVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        }
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         let requestParam = ["action" : "reportedmember"]
         showMembers(requestParam)
     }
+    
     @IBAction func click_gohome(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -60,10 +64,19 @@ class MemberVC: UITableViewController {
     /* UITableViewDataSource的方法，將資料顯示在儲存格上 */
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         /* cellId必須與storyboard內UITableViewCell的Identifier相同(Attributes inspector) */
+
         let cellId = "memberCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! MemberCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! MemberCell
+        print("cellForRow", indexPath.row, cell)
         let member = members[indexPath.row]
-        cell.memberimage.image = UIImage(named: "google")
+        cell.memberimage.image = nil
+        var requestParam = [String: Any]()
+        //  圖片1
+        requestParam["action"] = "getIosimage"
+        requestParam["member"] = try! String(data: JSONEncoder().encode(members[indexPath.row]), encoding: .utf8)
+
+        showImage(requestParam, cell)
+        
         cell.lbnickname.text = member.nickname
         cell.lbemail.text = member.email
         cell.lbphoneNumber.text = member.phoneNumber
@@ -76,6 +89,36 @@ class MemberVC: UITableViewController {
             let reportVC = segue.destination as! ReportVC
             reportVC.member = member
         }
+    }
+    
+    
+    
+    // @objc - 可以使用Objective-C
+    @objc func showImage(_ requestParam: [String: Any], _ cell: MemberCell) {
+        print("showImage", cell)
+        var image: UIImage?
+        let url_server_memberimv = URL(string: common_url + "memberController")
+        executeTask(url_server_memberimv!, requestParam) { data, response, error in
+            if error == nil {
+                if data != nil {
+                    // 查看回傳的資料
+                    image = nil
+                    image = UIImage(data: data!)
+                    if image != nil {
+                        DispatchQueue.main.async {
+                            cell.memberimage.image = image
+                            print("member_image",image)
+                        }
+                        
+                    }else {
+                        print("image not found")
+                        image = UIImage(named: "no_image")
+                }
+            }else {
+                print("Response Error: \(error!)")
+            }
+        }
+     }
     }
 }
 
