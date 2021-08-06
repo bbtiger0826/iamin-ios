@@ -21,7 +21,6 @@ class MemberVC: UITableViewController {
         let requestParam = ["action" : "reportedmember"]
         showMembers(requestParam)
     }
-
     
     
 
@@ -83,5 +82,6 @@ class MemberVC: UITableViewController {
             reportVC.member = member
         }
     }
+    
 }
 
