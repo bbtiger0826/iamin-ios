@@ -95,9 +95,15 @@ class AllMemberTVC: UITableViewController, UISearchBarDelegate {
         let member = searchMembers[indexPath.row]
 //        let member = members[indexPath.row]
 //        let index = indexPath.row + 1
-        cell.lbID.text = String (member.id!)
-        cell.lbEmail.text = "電子郵件: \(member.email!)"
-        cell.lbName.text = "會員名稱: \(member.nickname!)"
+//        cell.lbID.text = String (member.id!)
+        cell.lbEmail.text = member.email!
+        cell.lbName.text = member.nickname!
+        
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 0.5
+        cell.layer.cornerRadius = 8
+        cell.clipsToBounds = true
+        
         return cell
     }
     

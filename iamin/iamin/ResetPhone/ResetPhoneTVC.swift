@@ -19,6 +19,9 @@ class ResetPhoneTVC: UITableViewController,UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //隱藏tableView的分隔線
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -89,9 +92,15 @@ class ResetPhoneTVC: UITableViewController,UISearchBarDelegate {
         let cellId = "ResetPhoneCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! ResetPhoneCell
         let resetPhone = searchPhones[indexPath.row]
-        cell.lbEmail.text = "電子郵件: \(resetPhone.email!)"
         cell.lbId.text = String(resetPhone.member_id!)
         cell.lbName.text = "會員名稱: \(resetPhone.nickname!)"
+        cell.lbEmail.text = "電子郵件: \(resetPhone.email!)"
+        
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 0.5
+        cell.layer.cornerRadius = 8
+        cell.clipsToBounds = true
+        
         return cell
     }
     
