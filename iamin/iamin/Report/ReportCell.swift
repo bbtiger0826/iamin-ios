@@ -8,12 +8,12 @@
 import UIKit
 
 class ReportCell: UITableViewCell {
-
-    
     @IBOutlet weak var lb_number: UILabel!
     @IBOutlet weak var lb_title: UILabel!
     @IBOutlet weak var lb_report_title: UILabel!
     @IBOutlet weak var lb_message: UILabel!
     @IBOutlet weak var lb_report_message: UILabel!
+    @IBOutlet weak var lb_repoer_member: UILabel!
+    @IBOutlet weak var lb_report_member_id: UILabel!
     
 }

@@ -428,7 +428,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="A49-D4-Sl1">
-                                            <rect key="frame" x="10" y="10" width="218.5" height="110"/>
+                                            <rect key="frame" x="10" y="10" width="352" height="110"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cht-Ni-21j">
                                                     <rect key="frame" x="0.0" y="0.0" width="71" height="110"/>
@@ -474,6 +474,18 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YA2-Vt-Dcs">
+                                                    <rect key="frame" x="238.5" y="0.0" width="52" height="110"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTV-UX-CKY">
+                                                    <rect key="frame" x="310.5" y="0.0" width="41.5" height="110"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </stackView>
                                     </subviews>
@@ -486,6 +498,8 @@
                                 <connections>
                                     <outlet property="lb_message" destination="5Ct-AK-QyT" id="xPI-xl-Qap"/>
                                     <outlet property="lb_number" destination="cht-Ni-21j" id="gkC-IZ-gZE"/>
+                                    <outlet property="lb_repoer_member" destination="YA2-Vt-Dcs" id="kU0-GY-QDu"/>
+                                    <outlet property="lb_report_member_id" destination="jTV-UX-CKY" id="tTy-YQ-rvs"/>
                                     <outlet property="lb_report_message" destination="p2Z-hr-pWr" id="0H0-Im-6dh"/>
                                     <outlet property="lb_report_title" destination="foE-Ty-Dgh" id="xuF-ak-8zk"/>
                                     <outlet property="lb_title" destination="wAG-BF-xcx" id="idR-DB-i0q"/>
