@@ -115,6 +115,7 @@ class ReportVC: UITableViewController {
         }
     }
     
+    
     /* UITableViewDataSource的方法，定義表格的區塊數，預設值為1 */
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -139,6 +140,9 @@ class ReportVC: UITableViewController {
         cell.lb_message.text = "檢舉說明:"
         cell.lb_message.textColor = UIColor.link
         cell.lb_report_message.text = report.report_message
+        cell.lb_repoer_member.text = "檢舉人ID:"
+        cell.lb_repoer_member.textColor = UIColor.link
+        cell.lb_report_member_id.text = String(report.member_id!)
         return cell
     }
 }
