@@ -23,8 +23,8 @@ class MainVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         layout.minimumLineSpacing = 25
         // 設定每個項目的尺寸
         layout.itemSize = CGSize(
-            width: CGFloat(fullScreenSize.width)/3 - 10.0,
-            height: CGFloat(fullScreenSize.width)/3 - 10.0)
+            width: CGFloat(fullScreenSize.width)/2 - 10.0,
+            height: CGFloat(fullScreenSize.width)/2 - 10.0)
         // 設定header及footer的尺寸
         layout.headerReferenceSize = CGSize(
             width: fullScreenSize.width, height: 40)

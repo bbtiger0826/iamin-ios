@@ -135,6 +135,13 @@ class ResetPhoneTVC: UITableViewController,UISearchBarDelegate {
         swipeActions.performsFirstActionWithFullSwipe = false
         return swipeActions
     }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
+    }
+
 
     /*
     // Override to support conditional editing of the table view.

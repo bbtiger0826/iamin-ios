@@ -88,6 +88,30 @@ class GroupListTVC: UITableViewController, UISearchBarDelegate {
             }
         }
     }
+    
+    // @objc - 可以使用Objective-C
+    @objc func showFirstMerchImg(_ groupId: Int, _ cell: GroupCell) {
+        var image: UIImage?
+        var requestParam = [String: Any]()
+        requestParam["action"] = "getFirstImageByGroupId"
+        requestParam["groupId"] = groupId
+        requestParam["number"] = 1
+        executeTask(URL(string: common_url + "Merch")!, requestParam) { data, response, error in
+            if error == nil {
+                if data != nil {
+                    // 查看回傳的資料
+                    image = UIImage(data: data!)
+                    if image != nil {
+                        DispatchQueue.main.async { cell.imageGroup.image = image }
+                    }else {
+                        print("image not found")
+                    }
+                }
+            }else {
+                print("Response Error: \(error!)")
+            }
+        }
+    }
 
     // MARK: - Table view data source
     
@@ -106,11 +130,29 @@ class GroupListTVC: UITableViewController, UISearchBarDelegate {
         // 綁定UI畫面的ID(要去storyboard設定)，轉型GroupCell
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell") as! GroupCell
         let group = searchedGroups[indexPath.row]
+        showFirstMerchImg(group.groupId, cell);
 
+        // add border and color
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 0.5
+        cell.layer.cornerRadius = 8
+        cell.clipsToBounds = true
+        
         // 設定Cell
         cell.lableName.text = group.name
         cell.lableContactNumber.text = "聯絡電話：\(group.contactNumber)"
         return cell
+    }
+    
+    // Set the spacing between sections
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 5
+    }
+    // Make the background color show through
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
     }
 
     /*

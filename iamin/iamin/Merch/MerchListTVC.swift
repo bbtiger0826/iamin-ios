@@ -11,6 +11,7 @@ class MerchListTVC: UITableViewController {
     var group: Group!
     var merchs = [Merch]()
     let url_server = URL(string: common_url + "Merch")
+    var pageNum = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,14 +63,19 @@ class MerchListTVC: UITableViewController {
                         switch requestParam["number"] as! Int {
                         case 1:
                             DispatchQueue.main.async { cell.image1.image = image }
+                            DispatchQueue.main.async { cell.page.numberOfPages = 1 }
                         case 2:
                             DispatchQueue.main.async { cell.image2.image = image }
+                            DispatchQueue.main.async { cell.page.numberOfPages = 2 }
                         case 3:
                             DispatchQueue.main.async { cell.image3.image = image }
+                            DispatchQueue.main.async { cell.page.numberOfPages = 3 }
                         case 4:
                             DispatchQueue.main.async { cell.image4.image = image }
+                            DispatchQueue.main.async { cell.page.numberOfPages = 4 }
                         case 5:
                             DispatchQueue.main.async { cell.image5.image = image }
+                            DispatchQueue.main.async { cell.page.numberOfPages = 5 }
                         default:
                             break
                         }
@@ -79,13 +85,13 @@ class MerchListTVC: UITableViewController {
                         case 1:
                             DispatchQueue.main.async { cell.image1.isHidden = true }
                         case 2:
-                            DispatchQueue.main.async { cell.image2.isHidden = true  }
+                            DispatchQueue.main.async { cell.image2.isHidden = true }
                         case 3:
-                            DispatchQueue.main.async { cell.image3.isHidden = true  }
+                            DispatchQueue.main.async { cell.image3.isHidden = true }
                         case 4:
-                            DispatchQueue.main.async { cell.image4.isHidden = true  }
+                            DispatchQueue.main.async { cell.image4.isHidden = true }
                         case 5:
-                            DispatchQueue.main.async { cell.image5.isHidden = true  }
+                            DispatchQueue.main.async { cell.image5.isHidden = true }
                         default:
                             break
                         }
@@ -146,8 +152,27 @@ class MerchListTVC: UITableViewController {
         requestParam["id"] = merch.merchId
         requestParam["number"] = 5
         showImage(requestParam, cell)
+        //
+        cell.scrollView.tag = indexPath.row
+        // add border and color
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 0.5
+        cell.layer.cornerRadius = 8
+        cell.clipsToBounds = true
         
         return cell
+    }
+    //
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageNum = scrollView.contentOffset.x / scrollView.bounds.width
+        let cell = tableView.cellForRow(at: IndexPath(row: scrollView.tag, section: 0)) as! MerchCell
+        cell.page.currentPage = Int(pageNum)
+    }
+    // Make the background color show through
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
     }
 
     /*
@@ -194,5 +219,4 @@ class MerchListTVC: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

@@ -10,5 +10,8 @@ class MerchCell: UITableViewCell {
     @IBOutlet weak var image3: UIImageView!
     @IBOutlet weak var image4: UIImageView!
     @IBOutlet weak var image5: UIImageView!
+    @IBOutlet weak var page: UIPageControl!
+    @IBOutlet weak var scrollView: UIScrollView!
     
 }
+
