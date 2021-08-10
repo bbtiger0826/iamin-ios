@@ -44,15 +44,17 @@ class AdminLogin: UIViewController {
         requestParam["action"] = "adminLogin"
         requestParam["member"] = try! String(data: JSONEncoder().encode(admin), encoding: .utf8)
         executeTask(url_server!, requestParam)
-        
-        
-        
+                
     }
     
     @IBAction func clickClear(_ sender: Any) {
         tfAccount.text = ""
         tfPassword.text = ""
         tvResult.text = ""
+    }
+    @IBAction func clickQuickLogin(_ sender: Any) {
+        tfAccount.text = "Admin_001"
+        tfPassword.text = "password"
     }
     
     //連線
@@ -74,9 +76,6 @@ class AdminLogin: UIViewController {
                 if data != nil {
                     // 將輸入資料列印出來除錯用
                     print("input: \(String(data: data!, encoding: .utf8)!)")
-                    
-                    
-                    
                     // 將結果顯示在UI元件上必須轉給main thread
                     DispatchQueue.main.async {
                         self.showResult(data!)
@@ -84,6 +83,7 @@ class AdminLogin: UIViewController {
                 }
             } else {
                 print(error!.localizedDescription)
+                
             }
         }
         task.resume()
@@ -92,7 +92,7 @@ class AdminLogin: UIViewController {
     func showResult(_ jsonData: Data) {
         do{
             let result = try JSONDecoder().decode(Admin.self, from: jsonData)
-            tvResult.text = "id: \(result.id)\nAccount: \(result.account)"
+            tvResult.text = "登入成功"
             if(result.id > 0){
                 if(account != nil){
                     userDefault.setValue(account, forKey: "Account")
