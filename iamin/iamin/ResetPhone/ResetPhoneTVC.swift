@@ -7,10 +7,12 @@
 
 import UIKit
 
-class ResetPhoneTVC: UITableViewController {
+class ResetPhoneTVC: UITableViewController,UISearchBarDelegate {
 
+    @IBOutlet weak var searchBar: UISearchBar!
     var resetPhone: ResetPhone!
     var resetPhones = [ResetPhone]()
+    var searchPhones = [ResetPhone]()
     var member: Member!
     
     let url_server = URL(string: common_url + "memberController")
@@ -27,6 +29,20 @@ class ResetPhoneTVC: UITableViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        let text = searchBar.text ?? ""
+            print("text: \(text)")
+        if text.isEmpty{
+            searchPhones = resetPhones
+        }else{
+            // 搜尋原始資料內有無包含關鍵字(不區別大小寫)
+            searchPhones = resetPhones.filter({ (resetPhone) -> Bool in
+                return resetPhone.email!.uppercased().contains(text.uppercased())
+            })
+        }
+        tableView.reloadData()
+    }
+    
     func showMember(){
         var requestParam = [String: String]()
         requestParam["action"] = "getResetMemberInfo"
@@ -39,6 +55,7 @@ class ResetPhoneTVC: UITableViewController {
                     do {
                         let result = try JSONDecoder().decode([ResetPhone].self, from: data!)
                         self.resetPhones = result
+                        self.searchPhones = self.resetPhones
                         // 將結果顯示在UI元件上必須轉給main thread (取得資料後才設定，以避免view沒有資料可顯示)
                         DispatchQueue.main.async {
 
@@ -65,16 +82,16 @@ class ResetPhoneTVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return resetPhones.count
+        return searchPhones.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellId = "ResetPhoneCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! ResetPhoneCell
-        let resetPhone = resetPhones[indexPath.row]
+        let resetPhone = searchPhones[indexPath.row]
         cell.lbEmail.text = "電子郵件: \(resetPhone.email!)"
-        cell.lbId.text = String(resetPhone.member_id)
-        cell.lbName.text = "會員名稱: \(resetPhone.nickname)"
+        cell.lbId.text = String(resetPhone.member_id!)
+        cell.lbName.text = "會員名稱: \(resetPhone.nickname!)"
         return cell
     }
     
@@ -84,7 +101,7 @@ class ResetPhoneTVC: UITableViewController {
             var requestParam = [String: Any]()
             requestParam["action"] = "resetPhoneNumber"
             requestParam["member"] = try! String(data: JSONEncoder().encode(self.member), encoding: .utf8)
-            requestParam["resetPhone"] = try! String(data: JSONEncoder().encode(self.resetPhones[indexPath.row]), encoding: .utf8)
+            requestParam["resetPhone"] = try! String(data: JSONEncoder().encode(self.searchPhones[indexPath.row]), encoding: .utf8)
             executeTask(url_server_member!, requestParam) { data, response, error in
                 if error == nil {
                     if data != nil {
@@ -95,7 +112,7 @@ class ResetPhoneTVC: UITableViewController {
                                 // 確定server端刪除資料後，才將client端資料刪除
                                 if count != 0 {
                                     // resetPhones - remove
-                                    self.resetPhones.remove(at: indexPath.row)
+                                    self.searchPhones.remove(at: indexPath.row)
                                     // UI - remove
                                     DispatchQueue.main.async {
                                         tableView.deleteRows(at: [indexPath], with: .fade)
