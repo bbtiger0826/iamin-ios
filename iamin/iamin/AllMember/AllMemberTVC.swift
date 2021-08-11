@@ -95,7 +95,7 @@ class AllMemberTVC: UITableViewController, UISearchBarDelegate {
         let member = searchMembers[indexPath.row]
 //        let member = members[indexPath.row]
 //        let index = indexPath.row + 1
-//        cell.lbID.text = String (member.id!)
+        cell.lbID.text = String (member.id!)
         cell.lbEmail.text = member.email!
         cell.lbName.text = member.nickname!
         
@@ -107,11 +107,17 @@ class AllMemberTVC: UITableViewController, UISearchBarDelegate {
         return cell
     }
     
+    // Set the spacing between sections
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 2
+    }
+    // Make the background color show through
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
         headerView.backgroundColor = UIColor.clear
         return headerView
     }
+
     
     
 }
