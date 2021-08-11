@@ -63,19 +63,39 @@ class MerchListTVC: UITableViewController {
                         switch requestParam["number"] as! Int {
                         case 1:
                             DispatchQueue.main.async { cell.image1.image = image }
-                            DispatchQueue.main.async { cell.page.numberOfPages = 1 }
+                            DispatchQueue.main.async {
+                                if cell.page.numberOfPages < 1 {
+                                    cell.page.numberOfPages = 1
+                                }
+                            }
                         case 2:
                             DispatchQueue.main.async { cell.image2.image = image }
-                            DispatchQueue.main.async { cell.page.numberOfPages = 2 }
+                            DispatchQueue.main.async {
+                                if cell.page.numberOfPages < 2 {
+                                    cell.page.numberOfPages = 2
+                                }
+                            }
                         case 3:
                             DispatchQueue.main.async { cell.image3.image = image }
-                            DispatchQueue.main.async { cell.page.numberOfPages = 3 }
+                            DispatchQueue.main.async {
+                                if cell.page.numberOfPages < 3 {
+                                    cell.page.numberOfPages = 3
+                                }
+                            }
                         case 4:
                             DispatchQueue.main.async { cell.image4.image = image }
-                            DispatchQueue.main.async { cell.page.numberOfPages = 4 }
+                            DispatchQueue.main.async {
+                                if cell.page.numberOfPages < 4 {
+                                    cell.page.numberOfPages = 4
+                                }
+                            }
                         case 5:
                             DispatchQueue.main.async { cell.image5.image = image }
-                            DispatchQueue.main.async { cell.page.numberOfPages = 5 }
+                            DispatchQueue.main.async {
+                                if cell.page.numberOfPages < 5 {
+                                    cell.page.numberOfPages = 5
+                                }
+                            }
                         default:
                             break
                         }
