@@ -96,7 +96,7 @@ class MainVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
             reusableView.backgroundColor = UIColor.cyan
             reusableView.backgroundColor = UIColor(red: 175/255.0, green: 143/255.0, blue: 255/255.0, alpha: 1)
             label.text = "管理者系統";
-            label.textColor = UIColor.white
+            label.textColor = UIColor(red: 245/255.0, green: 229/255.0, blue: 230/255.0, alpha: 1)
 
         } else if kind == UICollectionView.elementKindSectionFooter {
             reusableView =

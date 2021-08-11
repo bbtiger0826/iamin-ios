@@ -25,6 +25,11 @@
                                 <outlet property="delegate" destination="oaM-Ny-AKL" id="6If-sV-dgw"/>
                             </connections>
                         </searchBar>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Hj0-Zr-3pe">
+                            <rect key="frame" x="0.0" y="874.6363639831543" width="414" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="GroupCell" id="SCW-rf-kHx" customClass="GroupCell" customModule="iamin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68.5" width="414" height="100"/>
@@ -84,7 +89,9 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="S4d-qW-xO8">
                                 <rect key="frame" x="20" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="回首頁"/>
+                                <state key="normal" title="回首頁">
+                                    <color key="titleColor" red="1" green="0.23529411764705882" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="clickBackHome:" destination="oaM-Ny-AKL" eventType="touchUpInside" id="DD4-BP-0gL"/>
                                 </connections>
@@ -97,7 +104,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KAz-Yf-1bM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-959.4202898550725" y="46.875"/>
+            <point key="canvasLocation" x="-1007" y="47"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Tb-2j-Qda">
@@ -106,6 +113,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="phb-tW-afw">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.23529411759999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.70980393890000004" green="0.55294120309999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
                         <segue destination="oaM-Ny-AKL" kind="relationship" relationship="rootViewController" id="pCf-Oa-Txp"/>
@@ -113,7 +122,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rKl-C1-8Jw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1657" y="47"/>
+            <point key="canvasLocation" x="-1746" y="47"/>
         </scene>
         <!--Merch ListTVC-->
         <scene sceneID="SmZ-sQ-LX2">
@@ -123,6 +132,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="P7d-Yt-M7y">
+                            <rect key="frame" x="0.0" y="379.00000034679067" width="414" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MerchCell" id="1X8-VZ-q4a" customClass="MerchCell" customModule="iamin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="330"/>
@@ -246,7 +260,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7HW-4U-cPh">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" red="0.94901961089999998" green="0.90196073060000004" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FoV-Cp-JvB">
                                     <size key="itemSize" width="100" height="100"/>
@@ -297,7 +311,9 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxh-AU-WeL">
                                             <rect key="frame" x="355" y="8" width="31" height="30"/>
-                                            <state key="normal" title="登出"/>
+                                            <state key="normal" title="登出">
+                                                <color key="titleColor" red="1" green="0.23529411759999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
                                             <connections>
                                                 <action selector="clickLogout:" destination="iCt-a9-g7B" eventType="touchUpInside" id="bcH-e0-wEC"/>
                                             </connections>
@@ -322,7 +338,7 @@
                             <constraint firstItem="7HW-4U-cPh" firstAttribute="top" secondItem="2jZ-cz-q8a" secondAttribute="top" id="SW7-7w-CUx"/>
                             <constraint firstItem="2jZ-cz-q8a" firstAttribute="trailing" secondItem="7HW-4U-cPh" secondAttribute="trailing" id="aAr-jq-bFk"/>
                             <constraint firstItem="7HW-4U-cPh" firstAttribute="top" secondItem="2jZ-cz-q8a" secondAttribute="top" id="sjj-T0-Xx1"/>
-                            <constraint firstItem="2jZ-cz-q8a" firstAttribute="bottom" secondItem="7HW-4U-cPh" secondAttribute="bottom" id="wFR-dg-CeJ"/>
+                            <constraint firstAttribute="bottom" secondItem="7HW-4U-cPh" secondAttribute="bottom" id="wFR-dg-CeJ"/>
                             <constraint firstItem="7HW-4U-cPh" firstAttribute="trailing" secondItem="2jZ-cz-q8a" secondAttribute="trailing" id="zgy-V6-Uxe"/>
                         </constraints>
                     </view>
@@ -333,7 +349,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wok-Zy-LxZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-859" y="-703"/>
+            <point key="canvasLocation" x="-859.4202898550725" y="-703.125"/>
         </scene>
         <!--被檢舉會員-->
         <scene sceneID="335-4P-5Ke">
@@ -343,6 +359,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="cEX-vJ-JL7">
+                            <rect key="frame" x="0.0" y="169.50000034679067" width="414" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memberCell" id="hq5-Ag-tBN" customClass="MemberCell" customModule="iamin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="120.5"/>
@@ -401,6 +422,7 @@
                                         <constraint firstItem="v7l-sE-CSC" firstAttribute="top" secondItem="LKl-QT-eSF" secondAttribute="topMargin" constant="18" id="xOc-oq-1lD"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.96078431610000004" green="0.89803922179999995" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <outlet property="lbemail" destination="ock-Gk-dwv" id="KUC-qs-rHH"/>
                                     <outlet property="lbnickname" destination="ZfI-q5-sIC" id="zxb-F0-RaT"/>
@@ -519,6 +541,7 @@
                                         <constraint firstItem="A49-D4-Sl1" firstAttribute="leading" secondItem="wIw-qu-sfU" secondAttribute="leading" constant="10" id="sKH-7r-JmC"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.96078431610000004" green="0.89803922179999995" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <outlet property="lb_message" destination="5Ct-AK-QyT" id="xPI-xl-Qap"/>
                                     <outlet property="lb_number" destination="cht-Ni-21j" id="gkC-IZ-gZE"/>
@@ -559,6 +582,11 @@
                                 <outlet property="delegate" destination="Fd3-4H-0JS" id="smm-ht-UWY"/>
                             </connections>
                         </searchBar>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="6XK-Zp-UBQ">
+                            <rect key="frame" x="0.0" y="908.6363639831543" width="414" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="allMemberCell" rowHeight="134" id="cGn-BH-PXx" customClass="AllMemberCell" customModule="iamin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68.5" width="414" height="134"/>
@@ -705,7 +733,7 @@
                             </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pdM-YT-X7N"/>
-                        <color key="backgroundColor" red="0.96078431610000004" green="0.89803922179999995" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.94509804249999996" green="0.86666667460000002" blue="0.87450981139999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="0yM-ds-gZ8" firstAttribute="top" secondItem="pdM-YT-X7N" secondAttribute="top" constant="47" id="9wj-Mw-JNQ"/>
                             <constraint firstItem="pdM-YT-X7N" firstAttribute="bottom" secondItem="gte-bE-gkT" secondAttribute="bottom" constant="170" id="ELN-Tm-lCM"/>
@@ -746,6 +774,11 @@
                                 <outlet property="delegate" destination="ytI-sF-xbU" id="niz-p2-NlA"/>
                             </connections>
                         </searchBar>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="P4K-aq-9nw">
+                            <rect key="frame" x="0.0" y="855.6363639831543" width="414" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ResetPhoneCell" rowHeight="81" id="GbS-7b-HIy" customClass="ResetPhoneCell" customModule="iamin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68.5" width="414" height="81"/>
@@ -832,6 +865,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="No4-Bi-ptw">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.23529411759999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.77647060160000003" green="0.61176472900000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
                         <segue destination="ytI-sF-xbU" kind="relationship" relationship="rootViewController" id="QMr-fn-zcz"/>
@@ -848,6 +883,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GLY-Yd-AyN">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.23529411759999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.67450982329999998" green="0.52549022440000004" blue="0.94901961089999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
                         <segue destination="BFj-YJ-75u" kind="relationship" relationship="rootViewController" id="Ldc-Ld-DIa"/>
@@ -902,7 +939,9 @@
                                 <rect key="frame" x="40" y="502" width="334" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.70980393890000004" blue="0.98431372640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="登入"/>
+                                <state key="normal" title="登入">
+                                    <color key="titleColor" red="0.49019610879999997" green="0.3803921938" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="clickLogin:" destination="eLi-an-dRQ" eventType="touchUpInside" id="ZSb-My-O3V"/>
                                 </connections>
@@ -955,6 +994,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uX4-wH-ROQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.23529411759999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.77647060160000003" green="0.61176472900000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

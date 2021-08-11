@@ -1,7 +1,7 @@
 
 import UIKit
 
-class AdminLogin: UIViewController {
+class AdminLogin: UIViewController,UITextFieldDelegate  {
 
     let userDefault = UserDefaults()
     
@@ -20,7 +20,6 @@ class AdminLogin: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         button.layer.cornerRadius = 4.0
         print(userDefault.value(forKey: "Account") ?? "nothing")
         print(userDefault.value(forKey: "Password") ?? "nothing")
@@ -114,6 +113,9 @@ class AdminLogin: UIViewController {
         requestParam["member"] = try! String(data: JSONEncoder().encode(admin), encoding: .utf8)
         executeTask(url_server!, requestParam)
     }
+    
+    
+    
     
     /*
     // MARK: - Navigation

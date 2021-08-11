@@ -21,6 +21,7 @@ class MerchListTVC: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         showAllMerchs()
+        navigationItem.title = group.name
     }
     
     // @objc - 可以使用Objective-C
@@ -187,6 +188,10 @@ class MerchListTVC: UITableViewController {
         let pageNum = scrollView.contentOffset.x / scrollView.bounds.width
         let cell = tableView.cellForRow(at: IndexPath(row: scrollView.tag, section: 0)) as! MerchCell
         cell.page.currentPage = Int(pageNum)
+    }
+    // Set the spacing between sections
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 2
     }
     // Make the background color show through
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
