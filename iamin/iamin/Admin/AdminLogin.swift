@@ -1,13 +1,14 @@
 
 import UIKit
 
-class AdminLogin: UIViewController {
+class AdminLogin: UIViewController,UITextFieldDelegate  {
 
     let userDefault = UserDefaults()
     
     @IBOutlet weak var tfAccount: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var tvResult: UITextView!
+    @IBOutlet weak var button: UIButton!
     
     let url_server = URL(string: common_url + "memberController")
     
@@ -19,8 +20,7 @@ class AdminLogin: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        button.layer.cornerRadius = 4.0
         print(userDefault.value(forKey: "Account") ?? "nothing")
         print(userDefault.value(forKey: "Password") ?? "nothing")
     }
@@ -47,11 +47,7 @@ class AdminLogin: UIViewController {
                 
     }
     
-    @IBAction func clickClear(_ sender: Any) {
-        tfAccount.text = ""
-        tfPassword.text = ""
-        tvResult.text = ""
-    }
+    
     @IBAction func clickQuickLogin(_ sender: Any) {
         tfAccount.text = "Admin_001"
         tfPassword.text = "password"
@@ -117,6 +113,9 @@ class AdminLogin: UIViewController {
         requestParam["member"] = try! String(data: JSONEncoder().encode(admin), encoding: .utf8)
         executeTask(url_server!, requestParam)
     }
+    
+    
+    
     
     /*
     // MARK: - Navigation
